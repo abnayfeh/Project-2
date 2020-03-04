@@ -1,0 +1,749 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+
+/* FONTS  */
+
+/* 
+font-family: 'Open Sans', sans-serif;
+
+font-family: 'Playfair Display', serif;
+
+font-family: 'Great Vibes', cursive;
+ */
+
+/* COLOURS  */
+
+/* 
+Orange: #e1560e
+Dark Grey: #23292c
+Beige: #eae5d6 
+*/
+
+
+
+/* ******************************** GLOBAL STYLES **************************************** */
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+}
+
+.wrapper {
+    max-width: 1000px;
+    width: 50%;
+    margin: 0 auto;
+} 
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+/* This ensures the images won't stretch if their parent containers get any larger than their default. */
+
+li {
+    list-style-type: none;
+}
+/* This removes all the bullet points from the list items */
+
+a {
+    text-decoration: none;
+}
+/* This removes all the underlines from the anchor tags */
+
+h2 {
+    font-family: 'Great Vibes', cursive;
+}
+/* All h2s in every section have this font, so I was able to style it globally */
+
+
+/* ------------------------------ HEADER STYLES ------------------------------------------- */
+
+header {
+    background-image: url(./assets/image-1.jpeg);
+    height: 100vh;
+    background-size: cover;
+    display: relative;
+}
+
+header .headerTitle {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+header .headerTitle .genuine {
+    margin-bottom: 5%;
+    width: 15vw;
+    /* QUESTIONS: 
+    
+    Is this okay that I made the width with vw?  I had it originally as pixels, but I wanted to make it responsive, and it seems to work. 
+
+    I also made the margin in percentage, so it would maintain the distance between itself and the other images next to it.  It seems to work, but is that the best way?  */
+}
+
+
+
+header .headerTitle .cookingSince {
+    position: relative;
+    top: -1%;
+    width: 30vw;
+    /* This allows the Cooking Since logo to jut up into the Food Passion logo's padding */
+}
+
+header .headerTitle a {
+    background-color: #e1560e;
+    padding: 20px 80px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white; 
+    /* transition: 800ms ease 50ms; */
+}
+
+header .headerTitle a:hover {
+    background-color: rgb(233, 113, 53);
+    color: black;
+}
+
+/* -------------- NAVIGATION ------------------------------- */
+
+header nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 11%;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .primaryNav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1rem;
+}
+
+header,
+header a {
+    color: #73848E;
+}
+
+header li {
+    list-style-type: none;
+}
+
+/* 1 - Logo has no styling */
+header .primaryNavOne {
+    height: 20%;
+    width: 80%;
+    border-bottom: 1px solid #73848E;
+    /* This logo is a png, so it's not possible to alter its colour, right?  I know on the handout, the logo is white, but the png is in grey, as you can see. */
+}
+
+/* 2 - Home,Services,Projects, etc.  */
+
+header .primaryNavTwo {
+    height: 35%;
+}
+
+header .secondaryNav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+}
+
+header .secondaryNav a {
+    text-transform: uppercase;
+}
+
+header .secondaryNav li {
+    margin: 15px 0;
+}
+
+header .secondaryNav li:before {
+    content:">";
+}
+
+header .secondaryNav a,
+header .secondaryNav li:before {
+    transition: 800ms ease 25ms;
+}
+
+header .secondaryNav a:hover,
+header .secondaryNav li:hover {
+    color: white;
+}
+
+/* 3 - Twitter Information  */
+header .primaryNavThree {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding: 20px 0;
+    border-top: 1px solid #73848E;
+    border-bottom: 1px solid #73848E;
+}
+
+header .primaryNavThree a,
+header .primaryNavThree p {
+    line-height: 1.7rem;
+    text-align: center;
+}
+
+header .primaryNavThree .twitterBig,
+header .primaryNavThree .twitterHandle {
+    color: #e1560e;
+}
+
+header .primaryNavThree .twitterBig {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header .primaryNavThree .twitterPortfolio {
+    color: white;
+}
+
+header .primaryNavThree .twitterTime {
+    text-transform: uppercase;
+}
+
+/* 4 - Social Media Info */
+header .primaryNavFour {
+    width: 100%;
+}
+
+
+header .mediaNav {
+    display: flex;
+    justify-content: center;
+}
+
+header .mediaNav a {
+    margin: 0 8px;
+    font-size: 1.6rem;
+    transition: 800ms ease 100ms;
+}
+
+header .mediaNav a:hover {
+    color: white;
+}
+
+/* 5 - Copyright */
+
+header .primaryNavFive {
+    font-size: 0.8rem;
+}
+
+/* ******************************************** GALLERY ***********************************************  */
+
+.gallery {
+    width: 100%;
+    background-color: #23292c;
+    color: #eae5d6;
+    text-align: center;
+    
+    
+}
+
+.gallery .galleryContent { 
+    height: 275px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* GALLERY HEADER  */
+.gallery h2 {
+    font-size: 3.5rem;
+    margin-bottom: 35px;
+    margin-top: 35px;
+    font-weight: 400;
+}
+
+.gallery h2 span {
+    color: #e1560e;
+}
+
+/* GALLERY PARAGRAPH  */
+.gallery p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* GALLERY NAVIGATION  */
+.gallery nav {
+    display: flex;
+    justify-content: center;
+}
+
+.gallery ul {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    width: 60%;
+}
+
+.gallery li {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding: 10px 0;
+    border-top: 1px solid #363d41;
+    border-bottom: 1px solid #363d41;
+}
+
+.gallery ul li:first-of-type {
+    border-left: 1px solid #363d41;
+}
+
+.gallery ul li:last-of-type {
+    border-right: 1px solid #363d41;
+}
+
+.gallery a {
+    color: #eae5d6;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 800ms ease 100ms;     
+}
+
+.gallery nav ul li:not(:nth-of-type(1)) a {
+    border-left: 1px solid #363d41;
+}
+/* This targets the first li within the ul.  However it styles the a tag, so the border does not go to the top of the navigation.  It is just in the middle, because the a tags are inline and don't have top/bottom padding.   */
+
+.gallery a:hover {
+    color: #e1560e;
+}
+
+/* ************************************** IMAGES ***********************************************  */ 
+
+
+.images ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.images li {
+    width: 20%;
+    position: relative;
+}
+
+.images li > img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* IMAGE OVERLAYS  */
+.images .imageOverlay {
+    opacity: 0;
+    /* This makes the Image Overlay invisible.  Below you will find a hover that makes it visible. */
+
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(0,0,0,0.6);
+    transition: 800ms ease-out 200ms;
+}
+
+.images .overlayText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+.images .overlayText h4 {
+    font-size: 1.3rem;
+}
+
+.images .overlayText h5 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.images .overlayIcons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+}
+
+.images li:hover .imageOverlay {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+/* **************************************** SERVICES ************************************************* */
+
+.services {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.services li {
+    padding: 0 10px;
+}
+
+.services h2 {
+    font-size: 3.5rem;
+    margin-bottom: 35px;
+    margin-top: 35px;
+    font-weight: 400;
+}
+
+.services h2 span {
+    color: #e1560e;
+}
+
+.services p {
+    font-size: 1.1rem;
+    line-height: 2rem;
+}
+
+.services .servicesDescription {
+    font-style: italic;
+    padding-bottom: 30px;
+}
+
+.services ul {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.services ul img {
+    margin-top: 10px;
+}
+
+.services ul h3 {
+    color: #e1560e;
+    font-weight: 400;
+    padding: 15px 0;
+}
+
+
+
+
+/* ***************************************** MAP IMG **************************************************  */
+
+
+.mapLayout {
+    position: relative;
+    z-index: -10;
+}
+
+.map {
+    width: 100%;
+}
+
+.mapMarker {
+    position: absolute;
+    height: 20px;
+    display: inline-block;
+    top: 27%;
+    left: 50%;
+    z-index: 10;    
+}
+/* This positions the map marker on the map and positions it so it is responsive to when the browser changes sizes. */
+
+
+/* ***************************************** FOOTER ****************************************************  */
+
+.contactUs {
+    /* height: 300px; */
+    background-color: #23292c; 
+    
+}
+
+.contactUs .contactContainer {
+    display: flex;
+    justify-content: center;
+}
+
+/* CONTACT LEFT  */
+
+.contactUs .contactLeft {
+    height: 200px;
+    width: 250px;
+    padding: 50px 20px 0 0;
+
+}
+
+.contactUs .contactLeft img {
+    display: block;
+    margin: 0 auto;
+    height: 30%;
+
+}
+
+.contactUs .contactLeft ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contactUs .contactLeft a {
+    padding: 10px 10px;
+    font-size: 1.4rem;
+    color: #73848E;
+    transition: 800ms ease 100ms;
+}
+
+.contactUs .contactLeft a:hover {
+    color: white;
+}
+
+/* CONTACT US FORM */
+
+.contactUs .contactForm {
+    height: 300px;
+    width: 500px;
+    background-color: white;
+    border: 2px solid black;
+    margin-top: -80px;
+}
+
+.contactUs h2 {
+    font-size: 3.5rem;
+    padding: 35px 0 0 0;
+    font-weight: 400;
+    text-align: center;
+}
+
+.contactUs h2 span {
+    color: #e1560e;
+}
+
+.contactUs form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.contactUs .formEntry {
+    background: rgb(197, 191, 191);
+    margin: 5px 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 3px;
+}
+
+.contactUs .formEntry input,
+.contactUs .formEntry textarea {
+    background: rgb(197, 191, 191);
+    border: none;
+
+}
+
+.contactUs .contactForm .formSubmit {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid black;
+    background-color: white;
+    align-self: center;
+    transition: 800ms ease 100ms;
+}
+
+.contactUs .contactForm .formSubmit:hover {
+    background-color: black;
+    color: white;
+}
+
+
+
+
+/* CONTACT RIGHT  */
+
+.contactUs .contactRight {
+    width: 250px;
+    padding: 50px 0px 0px 30px;
+    font-size: 1rem;
+    color: #73848E;
+    line-height: 1.5rem;
+}
+
+.contactUs .contactRight address {
+    font-style: normal;
+    padding-bottom: 10px;
+}
+
+.contactUs .contactRight a {
+    color: #73848E;
+}
+
+.contactUs .contactRight p:nth-of-type(2) {
+    padding-bottom: 10px;
+}
+
+
+/* CONTACT COPYRIGHT */
+
+.contactUs .copyright {
+    color: #73848E;
+    font-size: 1rem;
+    padding: 40px 0 20px 0;
+    text-align: center;
+}
+
+/* ************************************* MEDIA QUERIES ***************************************************** */
+
+@media (max-width: 900px) {
+
+    header .headerTitle {
+        height: auto;
+        margin-top: 100px;
+    }
+    
+    /* HEADER TITLE BUTTON ("View Details") */
+    header .headerTitle a {
+        margin-top: 20px;
+        padding: 10px 40px;
+        
+    }
+
+    /* ----------------------NAVIGATION-------------------- */
+    header nav {
+        position: static;
+        height: 20%;
+        width: 100vw;
+        background-color: rgba(0,0,0,0.8);
+        padding-bottom: 20px;
+    }
+
+    header nav .secondaryNav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .secondaryNav li:before {
+        display: none;
+    }
+
+    .secondaryNav a {
+        padding: 10px;
+        font-size: 2.5rem;
+    }
+
+    /* OTHER ELEMENTS OF FULL-SCREEN NAVIGATION  */
+    header nav .primaryNavOne,
+    header nav .primaryNavThree, 
+    header nav .primaryNavFour,
+    header nav .primaryNavFive {
+        display: none;
+    }
+    /* This turns off the rest of the navigation elements, to simplify the layout on a smaller screen */
+
+
+    /* ------------- IMAGE SECTION---------------  */
+
+    .images li {
+        width: 50%;
+    }
+
+    .images .overlayText h4 {
+        font-size: 1.5rem;
+    }
+
+
+    .images .overlayText h5 {
+        font-size: 1rem;
+    }
+
+    /* ---------------SERVICES------------------- */
+
+    .services ul {
+        flex-direction: column;
+    }
+
+    
+
+    /* ------------------FOOTER-------------------- */
+
+    .contactUs .contactForm .formSubmit {
+        padding: 5px 10px;
+    }
+
+    .contactContainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contactUs .contactForm {
+        order: 1;
+    }
+
+    .contactUs .contactLeft {
+        order: 2;
+        padding: 10px 0 0 0;
+        height: 100px;
+    }
+
+    .contactUs .contactLeft img {
+        height: 60%;
+    }
+
+    .contactUs .contactRight {
+        order: 3;
+        padding: 30px 0 0 0;
+        text-align: center;
+    }
+
+    .contactUs .copyright {
+        padding: 20px 0 20px 0;
+    }
+
+}
